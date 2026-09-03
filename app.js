@@ -891,7 +891,7 @@ async function callGroq(prompt) {
       'Authorization': `Bearer ${state.groqKey}`
     },
     body: JSON.stringify({
-      model: 'llama-3.1-70b-versatile',
+      model: 'qwen/qwen3.8-27b',
       messages: [
         { role: 'system', content: 'You are an expert GATE CS tutor who explains concepts clearly to beginners.' },
         { role: 'user', content: prompt }
