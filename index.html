@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GATE CS 2027 — Practice Portal</title>
+  <meta name="description" content="Official-style GATE CS practice exam portal with PYQs, timer, navigation panel, scoring, and AI-powered explanations for wrong answers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== HOME SCREEN ===== -->
+<div id="homeScreen" class="screen active">
+  <div class="home-bg"></div>
+  <div class="home-container">
+    <div class="home-header">
+      <div class="logo-badge">GATE CS</div>
+      <h1>Practice Portal <span class="year-tag">2027</span></h1>
+      <p class="subtitle">Official-style exam simulation with AI-powered explanations</p>
+    </div>
+
+    <div class="stats-bar" id="overallStats">
+      <div class="stat-card">
+        <span class="stat-num" id="totalAttempted">0</span>
+        <span class="stat-label">Tests Taken</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="avgAccuracy">—</span>
+        <span class="stat-label">Avg Accuracy</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="totalQuestionsAttempted">0</span>
+        <span class="stat-label">Questions Done</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="bestScore">—</span>
+        <span class="stat-label">Best Score</span>
+      </div>
+    </div>
+
+    <div class="config-panel">
+      <h2>Configure Your Test</h2>
+      <div class="config-grid">
+        <div class="config-item">
+          <label for="subjectFilter">Subject</label>
+          <select id="subjectFilter">
+            <option value="All Subjects">All Subjects</option>
+            <option value="Discrete Mathematics">Discrete Mathematics</option>
+            <option value="Algorithms">Algorithms</option>
+            <option value="Data Structures">Data Structures</option>
+            <option value="Operating Systems">Operating Systems</option>
+            <option value="Theory of Computation">Theory of Computation</option>
+            <option value="DBMS">DBMS</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Computer Organization">Computer Organization</option>
+            <option value="Compiler Design">Compiler Design</option>
+            <option value="Digital Logic">Digital Logic</option>
+            <option value="Programming">Programming</option>
+            <option value="Engineering Mathematics">Engineering Mathematics</option>
+          </select>
+        </div>
+
+        <div class="config-item">
+          <label for="yearFilter">Year</label>
+          <select id="yearFilter">
+            <option value="all">All Years</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+          </select>
+        </div>
+
+        <div class="config-item">
+          <label for="questionCount">No. of Questions</label>
+          <select id="questionCount">
+            <option value="10">10 questions (Quick)</option>
+            <option value="20">20 questions</option>
+            <option value="30" selected>30 questions (Standard)</option>
+            <option value="65">65 questions (Full GATE)</option>
+            <option value="all">All Available</option>
+          </select>
+        </div>
+
+        <div class="config-item">
+          <label for="testDuration">Duration</label>
+          <select id="testDuration">
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>
+            <option value="90" selected>90 minutes</option>
+            <option value="180">3 hours (Full GATE)</option>
+            <option value="0">No Time Limit</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mode-toggle">
+        <span>Dark Mode</span>
+        <label class="toggle">
+          <input type="checkbox" id="darkModeToggle" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <button id="startTestBtn" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        Start Test
+      </button>
+    </div>
+
+    <div class="history-section" id="historySection">
+      <h2>Recent Test History</h2>
+      <div id="historyList" class="history-list">
+        <p class="empty-state">No tests taken yet. Start your first test!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXAM SCREEN ===== -->
+<div id="examScreen" class="screen">
+  <div class="exam-header">
+    <div class="exam-header-left">
+      <div class="exam-logo">GATE CS</div>
+      <div class="exam-info">
+        <span id="examSubjectLabel">Computer Science</span>
+        <span id="examQuestionCountLabel">30 Questions</span>
+      </div>
+    </div>
+    <div class="exam-timer-wrap">
+      <div class="timer-icon">⏱</div>
+      <div id="timerDisplay" class="timer-display">01:30:00</div>
+      <div id="timerLabel" class="timer-label">Remaining</div>
+    </div>
+    <button id="submitExamBtn" class="btn-submit">Submit Test</button>
+  </div>
+
+  <div class="exam-layout">
+    <!-- Left: Question Panel -->
+    <div class="question-panel" id="questionPanel">
+      <div class="question-header">
+        <span class="q-number" id="currentQNumber">Question 1</span>
+        <div class="q-meta">
+          <span class="q-subject" id="currentQSubject">Subject</span>
+          <span class="q-marks" id="currentQMarks">2 marks</span>
+          <span class="q-year" id="currentQYear">2023</span>
+          <span class="q-type" id="currentQType">MCQ</span>
+        </div>
+      </div>
+
+      <div class="question-body">
+        <p id="questionText" class="question-text"></p>
+        <div id="questionDiagram" class="question-diagram hidden"></div>
+
+        <div id="optionsContainer" class="options-container"></div>
+
+        <div id="natContainer" class="nat-container hidden">
+          <label class="nat-label">Enter your numerical answer:</label>
+          <input type="number" id="natInput" class="nat-input" step="any" placeholder="Type your answer here..." />
+        </div>
+      </div>
+
+      <div class="question-actions">
+        <button id="markReviewBtn" class="btn-mark-review">
+          🔖 Mark for Review
+        </button>
+        <button id="clearResponseBtn" class="btn-clear">
+          ✕ Clear Response
+        </button>
+        <div class="nav-buttons">
+          <button id="prevBtn" class="btn-nav">← Previous</button>
+          <button id="saveNextBtn" class="btn-save-next">Save & Next →</button>
+        </div>
+      </div>
+
+      <div class="question-progress">
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="progress-labels">
+          <span id="answeredCount">Answered: 0</span>
+          <span id="markedCount">Marked: 0</span>
+          <span id="remainingCount">Not Visited: 0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Navigation Panel -->
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-panel-header">Question Navigator</div>
+      <div class="nav-legend">
+        <div class="legend-item"><span class="legend-dot answered"></span>Answered</div>
+        <div class="legend-item"><span class="legend-dot marked"></span>Marked</div>
+        <div class="legend-item"><span class="legend-dot visited"></span>Visited</div>
+        <div class="legend-item"><span class="legend-dot unvisited"></span>Not Visited</div>
+        <div class="legend-item"><span class="legend-dot marked-answered"></span>Marked+Answered</div>
+      </div>
+      <div class="nav-grid" id="navGrid"></div>
+      <div class="nav-panel-footer">
+        <div class="section-info">
+          <span id="sectionAnswered">0</span> answered of <span id="sectionTotal">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== RESULTS SCREEN ===== -->
+<div id="resultsScreen" class="screen">
+  <div class="results-container">
+    <div class="results-header">
+      <h1>Test Complete!</h1>
+      <p id="resultsDate" class="results-date"></p>
+    </div>
+
+    <div class="score-card">
+      <div class="score-main">
+        <div class="score-circle" id="scoreCircle">
+          <svg viewBox="0 0 100 100" class="score-ring">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+            <circle id="scoreRingFill" cx="50" cy="50" r="42" fill="none" stroke="url(#scoreGrad)" stroke-width="8"
+                    stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"
+                    transform="rotate(-90 50 50)"/>
+            <defs>
+              <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#6c63ff"/>
+                <stop offset="100%" stop-color="#48cfad"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="score-text">
+            <span id="scorePercent" class="score-pct">0%</span>
+            <span class="score-sub">Accuracy</span>
+          </div>
+        </div>
+
+        <div class="score-details">
+          <div class="score-stat">
+            <span class="ss-value" id="totalMarksObtained">0</span>
+            <span class="ss-label">Marks Obtained</span>
+          </div>
+          <div class="score-stat">
+            <span class="ss-value" id="totalMarksPossible">0</span>
+            <span class="ss-label">Total Marks</span>
+          </div>
+          <div class="score-stat correct">
+            <span class="ss-value" id="correctCount">0</span>
+            <span class="ss-label">✓ Correct</span>
+          </div>
+          <div class="score-stat wrong">
+            <span class="ss-value" id="wrongCount">0</span>
+            <span class="ss-label">✗ Wrong</span>
+          </div>
+          <div class="score-stat skipped">
+            <span class="ss-value" id="skippedCount">0</span>
+            <span class="ss-label">— Skipped</span>
+          </div>
+          <div class="score-stat time">
+            <span class="ss-value" id="timeTaken">0</span>
+            <span class="ss-label">⏱ Time (min)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subject-breakdown" id="subjectBreakdown"></div>
+    </div>
+
+    <div class="results-actions">
+      <button id="reviewAnswersBtn" class="btn-primary">📋 Review All Answers</button>
+      <button id="retakeTestBtn" class="btn-secondary">🔄 Retake Test</button>
+      <button id="backHomeBtn" class="btn-outline">🏠 Home</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== REVIEW SCREEN ===== -->
+<div id="reviewScreen" class="screen">
+  <div class="review-header">
+    <button id="backToResultsBtn" class="btn-back">← Back to Results</button>
+    <h2>Answer Review</h2>
+    <div class="review-filters">
+      <button class="review-filter-btn active" data-filter="all">All</button>
+      <button class="review-filter-btn" data-filter="wrong">Wrong</button>
+      <button class="review-filter-btn" data-filter="skipped">Skipped</button>
+      <button class="review-filter-btn" data-filter="correct">Correct</button>
+    </div>
+  </div>
+
+  <div class="review-container">
+    <div class="ai-banner" id="aiBanner">
+      <div class="ai-banner-icon">🤖</div>
+      <div class="ai-banner-text">
+        <strong>AI Explanations Available</strong>
+        <span>Click any question's "Get AI Explanation" button for a detailed teacher-style explanation</span>
+      </div>
+      <div class="ai-status" id="aiStatus">Checking AI...</div>
+    </div>
+
+    <div id="reviewList" class="review-list"></div>
+  </div>
+</div>
+
+<!-- ===== AI EXPLANATION MODAL ===== -->
+<div id="aiModal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">
+        <span class="ai-icon">🤖</span>
+        <span>AI Teacher Explanation</span>
+      </div>
+      <button id="closeModal" class="modal-close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="aiQuestion" class="ai-question-preview"></div>
+      <div id="aiExplanationContent" class="ai-explanation"></div>
+      <div id="aiLoading" class="ai-loading hidden">
+        <div class="ai-dots">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <p>Thinking like a teacher...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SUBMIT CONFIRMATION MODAL ===== -->
+<div id="submitModal" class="modal-overlay hidden">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <div class="modal-title">Submit Test?</div>
+    </div>
+    <div class="modal-body">
+      <div class="submit-summary" id="submitSummary"></div>
+      <div class="submit-actions">
+        <button id="confirmSubmit" class="btn-primary">Yes, Submit</button>
+        <button id="cancelSubmit" class="btn-outline">Continue Test</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="questions.js"></script>
+<script src="questions-with-diagrams.js"></script>
+<script src="diagram-renderer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
