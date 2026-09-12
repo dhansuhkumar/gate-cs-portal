@@ -40,7 +40,8 @@ const screens = {
   home: document.getElementById('homeScreen'),
   exam: document.getElementById('examScreen'),
   results: document.getElementById('resultsScreen'),
-  review: document.getElementById('reviewScreen')
+  review: document.getElementById('reviewScreen'),
+  study: document.getElementById('studyScreen')
 };
 
 // ─── Utility Functions ────────────────────────────────────────
