@@ -154,11 +154,81 @@ function renderBookmarks() {
   list.innerHTML = items + (ids.length > 5 ? `<p class="empty-state" style="text-align:center;padding:8px">+${ids.length - 5} more...</p>` : '');
 }
 
+// ─── Weakness Dashboard ─────────────────────────────────────
+function getTopicStats() {
+  try { return JSON.parse(localStorage.getItem('gateTopicStats') || '{}'); }
+  catch (e) { return {}; }
+}
+function saveTopicStats(stats) {
+  localStorage.setItem('gateTopicStats', JSON.stringify(stats));
+}
+function updateTopicStats() {
+  if (!state.lastResults) return;
+  const { questions, userAnswers } = state.lastResults;
+  const stats = getTopicStats();
+  questions.forEach(q => {
+    const key = `${q.subject}|${q.topic}`;
+    if (!stats[key]) stats[key] = { attempts: 0, correct: 0, total: 0 };
+    stats[key].attempts++;
+    stats[key].total++;
+    const ua = userAnswers[q.id];
+    const hasAns = ua !== undefined && ua !== '' && !(Array.isArray(ua) && ua.length === 0);
+    if (hasAns && checkAnswer(q, ua)) stats[key].correct++;
+  });
+  saveTopicStats(stats);
+}
+function classifyTopics() {
+  const stats = getTopicStats();
+  const result = [];
+  for (const [key, s] of Object.entries(stats)) {
+    const [subject, topic] = key.split('|');
+    const accuracy = s.total > 0 ? (s.correct / s.total) * 100 : 0;
+    result.push({ subject, topic, accuracy, attempts: s.total, correct: s.correct });
+  }
+  return result;
+}
+function getWeakTopics(threshold = 60) {
+  return classifyTopics().filter(t => t.accuracy < threshold && t.attempts >= 3).sort((a,b) => a.accuracy - b.accuracy);
+}
+function getStrongTopics(threshold = 80) {
+  return classifyTopics().filter(t => t.accuracy >= threshold && t.attempts >= 3).sort((a,b) => b.accuracy - a.accuracy);
+}
+function renderTopicDashboard() {
+  const weak = getWeakTopics();
+  const strong = getStrongTopics();
+  const weakEl = $('weakTopics');
+  const strongEl = $('strongTopics');
+  if (weak.length === 0 && strong.length === 0) {
+    weakEl.innerHTML = '<p class="empty-state">Take a few tests to see your performance breakdown by topic.</p>';
+    strongEl.innerHTML = '';
+    return;
+  }
+  weakEl.innerHTML = weak.length > 0
+    ? `<h3 style="color:var(--wrong);font-size:1rem;margin-bottom:12px;">⚠️ Weak Topics (accuracy &lt; 60%)</h3>`
+      + weak.slice(0, 5).map(t => `
+        <div class="subject-row">
+          <span class="subject-name">${t.subject} &gt; ${t.topic}</span>
+          <div class="subject-bar"><div class="subject-bar-fill weak-fill" style="width:${t.accuracy}%"></div></div>
+          <span class="subject-pct">${t.accuracy.toFixed(0)}% (${t.correct}/${t.attempts})</span>
+        </div>`).join('')
+    : '<p class="empty-state">No weak topics detected yet.</p>';
+  strongEl.innerHTML = strong.length > 0
+    ? `<h3 style="color:var(--correct);font-size:1rem;margin-bottom:12px;margin-top:16px;">✅ Strong Topics (accuracy &gt; 80%)</h3>`
+      + strong.slice(0, 5).map(t => `
+        <div class="subject-row">
+          <span class="subject-name">${t.subject} &gt; ${t.topic}</span>
+          <div class="subject-bar"><div class="subject-bar-fill strong-fill" style="width:${t.accuracy}%"></div></div>
+          <span class="subject-pct">${t.accuracy.toFixed(0)}% (${t.correct}/${t.attempts})</span>
+        </div>`).join('')
+    : '';
+}
+
 // ─── Home Screen ──────────────────────────────────────────────
 function initHome() {
   renderStats();
   renderHistory();
   renderBookmarks();
+  renderTopicDashboard();
 
   // Dark mode default
   const darkToggle = $('darkModeToggle');
@@ -662,6 +732,7 @@ function computeResults() {
   localStorage.setItem('gateStats', JSON.stringify(state.overallStats));
 
   renderResults(state.lastResults);
+  updateTopicStats();
 }
 
 function checkAnswer(q, userAns) {
