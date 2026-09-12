@@ -99,6 +99,8 @@ function renderSourceLinkHtml(q) {
   return `<button class="btn-learn-more" data-pdf="${pdf}" data-page="${page}" onclick="goToSource('${pdf}', ${page})">📚 Where to Learn More</button>`;
 }
 function goToSource(pdf, page) {
+  const activeScreen = Object.keys(screens).find(k => screens[k].classList.contains('active')) || 'home';
+  if (typeof studyReturnScreen !== 'undefined') studyReturnScreen = activeScreen;
   showScreen('study');
   if (typeof openNotesFromQuestion === 'function') {
     openNotesFromQuestion(pdf, page);
@@ -873,6 +875,7 @@ function initResultsEvents() {
     renderStats();
     renderHistory();
     renderBookmarks();
+    renderTopicDashboard();
     showScreen('home');
   });
 }

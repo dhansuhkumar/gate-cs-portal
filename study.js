@@ -5,6 +5,7 @@ let studyContent = [];
 let pdfDoc = null;
 let currentPdfPath = '';
 let currentPage = 1;
+let studyReturnScreen = 'home';
 
 const PDF_PATH_MAP = {
   'Algorithm_RBR_Notes.pdf': '../GATE_CSE/01_Algorithm/Algorithm_RBR_Notes.pdf',
@@ -41,7 +42,7 @@ function openStudy() {
   else renderStudySidebar();
 }
 
-function closeStudy() { showScreen('home'); }
+function closeStudy() { showScreen(studyReturnScreen || 'home'); }
 
 function loadStudyContent() {
   fetch('study-content.json')
