@@ -1011,3 +1011,14 @@ input:checked + .slider:before { transform: translateX(24px); background: white;
 .pdf-viewer-title { font-size: 1.1rem; margin-bottom: 12px; }
 .pdf-canvas-container canvas { width: 100%; box-shadow: var(--shadow-lg); border-radius: 8px; background: white; }
 .pdf-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+
+/* ============================================================
+   SMART TEST MODE & NOTES SOURCE LINKS
+   ============================================================ */
+.q-source { margin-left: 8px; }
+.q-source-link { color: var(--accent-teal); font-size: 0.8rem; text-decoration: none; border-bottom: 1px dashed var(--accent-teal); }
+.btn-learn-more { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--accent-teal); background: transparent; color: var(--accent-teal); cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: var(--transition); text-decoration: none; }
+.btn-learn-more:hover { background: var(--accent-teal); color: white; }
+.btn-learn-more.hidden { display: none; }
+.smart-hint { margin: 0 0 24px; }
+.smart-hint.hidden { display: none; }

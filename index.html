@@ -140,7 +140,17 @@
             <option value="0">No Time Limit</option>
           </select>
         </div>
+
+        <div class="config-item">
+          <label for="testMode">Test Mode</label>
+          <select id="testMode">
+            <option value="standard" selected>Standard</option>
+            <option value="smart">Smart (targets your weak topics)</option>
+          </select>
+        </div>
       </div>
+
+      <p id="smartHint" class="smart-hint hidden" style="margin-top:12px;font-size:0.85rem;color:var(--accent-teal);">⚡ Smart Mode: questions selected with extra weight from topics where your accuracy is low.</p>
 
       <div class="mode-toggle">
         <span>Dark Mode</span>
@@ -215,6 +225,7 @@
           <span class="q-marks" id="currentQMarks">2 marks</span>
           <span class="q-year" id="currentQYear">2023</span>
           <span class="q-type" id="currentQType">MCQ</span>
+          <span class="q-source" id="currentQSource"></span>
         </div>
       </div>
 
@@ -240,6 +251,7 @@
         <button id="bookmarkBtn" class="btn-bookmark" onclick="toggleBookmark()">
           📑 Bookmark
         </button>
+        <a href="#" id="learnMoreLink" class="btn-learn-more hidden" onclick="event.preventDefault(); goToSource()">📚 Where to Learn →</a>
         <div class="nav-buttons">
           <button id="prevBtn" class="btn-nav">← Previous</button>
           <button id="saveNextBtn" class="btn-save-next">Save & Next →</button>

@@ -70,6 +70,43 @@ function shuffleArray(arr) {
   return a;
 }
 
+// ─── Smart Test Mode ─────────────────────────────────────────
+function getTopicAccuracyMap() {
+  const stats = getTopicStats();
+  const map = {};
+  for (const [key, s] of Object.entries(stats)) {
+    map[key] = s.total > 0 ? (s.correct / s.total) * 100 : 50;
+  }
+  return map;
+}
+function getSmartTestPool(pool) {
+  const stats = getTopicStats();
+  const acc = getTopicAccuracyMap();
+  const scored = pool.map(q => {
+    const key = `${q.subject}|${q.topic}`;
+    const base = acc[key] !== undefined ? acc[key] : 50;
+    const score = base + (Math.random() * 12 - 6); // weak topics (low accuracy) sort first with slight randomness
+    return { q, score };
+  });
+  scored.sort((a, b) => a.score - b.score);
+  return scored.map(s => s.q);
+}
+// ─── Source Links ────────────────────────────────────────────
+function renderSourceLinkHtml(q) {
+  if (!q || !q.sourceRef || !q.sourceRef.pdf) return '';
+  const pdf = q.sourceRef.pdf;
+  const page = q.sourceRef.page || 1;
+  return `<button class="btn-learn-more" data-pdf="${pdf}" data-page="${page}" onclick="goToSource('${pdf}', ${page})">📚 Where to Learn More</button>`;
+}
+function goToSource(pdf, page) {
+  showScreen('study');
+  if (typeof openNotesFromQuestion === 'function') {
+    openNotesFromQuestion(pdf, page);
+  } else {
+    alert('Study notes not loaded.');
+  }
+}
+
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(text));
@@ -244,6 +281,13 @@ function initHome() {
   });
 
   $('startTestBtn').addEventListener('click', startTest);
+
+  // Smart mode hint
+  const tm = $('testMode');
+  if (tm) tm.addEventListener('change', () => {
+    const hint = $('smartHint');
+    if (hint) hint.classList.toggle('hidden', tm.value !== 'smart');
+  });
 }
 
 function renderStats() {
@@ -297,12 +341,18 @@ function startTest() {
     return;
   }
 
-  // Shuffle and limit
-  pool = shuffleArray(pool);
+  // Smart mode selection (weak-topic weighted) vs standard shuffle
+  const smartEnabled = $('testMode') && $('testMode').value === 'smart';
+  if (smartEnabled) {
+    pool = getSmartTestPool(pool);
+  } else {
+    pool = shuffleArray(pool);
+  }
   if (countSel !== 'all') {
     const n = parseInt(countSel);
     if (!isNaN(n)) pool = pool.slice(0, n);
   }
+  if (smartEnabled) pool = shuffleArray(pool);
 
   // Initialize state
   state.filteredQuestions = pool;
@@ -319,6 +369,9 @@ function startTest() {
   // Setup exam UI
   $('examSubjectLabel').textContent = subject === 'All Subjects' ? 'Computer Science' : subject;
   $('examQuestionCountLabel').textContent = `${pool.length} Questions`;
+  if (smartEnabled) {
+    $('examQuestionCountLabel').textContent = `⚡ Smart: ${pool.length} Questions (weak-area focused)`;
+  }
 
   // Build nav grid
   buildNavGrid();
@@ -421,6 +474,16 @@ function renderQuestion(index) {
   if (bmBtn) {
     bmBtn.innerHTML = isBookmarked(q.id) ? '📑 Bookmarked ✓' : '📑 Bookmark';
     bmBtn.classList.toggle('active', isBookmarked(q.id));
+  }
+
+  // Source link badge
+  const srcEl = $('currentQSource');
+  if (srcEl) {
+    if (q.sourceRef && q.sourceRef.pdf) {
+      srcEl.innerHTML = `<a href="#" class="q-source-link" onclick="event.preventDefault(); goToSource('${q.sourceRef.pdf}', ${q.sourceRef.page || 1})">📚 Notes p.${q.sourceRef.page || 1}</a>`;
+    } else {
+      srcEl.innerHTML = '';
+    }
   }
 
   // Options or NAT
@@ -889,6 +952,7 @@ function renderReview(filter = 'all') {
       </div>
       <div class="review-item-actions">
         ${showAIBtn ? `<button class="btn-ai-explain" onclick="openAIModal('${q.id}')">🤖 Get AI Explanation</button>` : ''}
+        ${renderSourceLinkHtml(q)}
       </div>
     `;
     list.appendChild(div);
