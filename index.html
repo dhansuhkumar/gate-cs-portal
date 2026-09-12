@@ -157,6 +157,11 @@
       </div>
     </div>
 
+    <div class="history-section" id="bookmarksSection">
+      <h2>📑 My Bookmarks <span id="bookmarkCount" class="bookmark-count"></span></h2>
+      <div id="bookmarksPreview" class="history-list"></div>
+    </div>
+
     <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;">
       <a href="question-builder.html" class="btn-primary" style="text-decoration:none;display:flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;background:var(--accent-purple);color:#fff;font-weight:600;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
@@ -215,6 +220,9 @@
         </button>
         <button id="clearResponseBtn" class="btn-clear">
           ✕ Clear Response
+        </button>
+        <button id="bookmarkBtn" class="btn-bookmark" onclick="toggleBookmark()">
+          📑 Bookmark
         </button>
         <div class="nav-buttons">
           <button id="prevBtn" class="btn-nav">← Previous</button>

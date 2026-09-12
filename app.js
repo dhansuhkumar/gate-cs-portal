@@ -75,10 +75,90 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// ─── Bookmarks ─────────────────────────────────────────────
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem('gateBookmarks') || '{}'); }
+  catch (e) { return {}; }
+}
+function saveBookmarks(bm) {
+  localStorage.setItem('gateBookmarks', JSON.stringify(bm));
+}
+function isBookmarked(qId) { return !!getBookmarks()[qId]; }
+function buildAutoTags(q) {
+  const tags = [q.subject, q.topic, q.type];
+  if (q.type === 'NAT') tags.push('numerical');
+  if (q.marks === 2) tags.push('2-mark');
+  return tags;
+}
+function toggleBookmark() {
+  const q = state.filteredQuestions[state.currentIndex];
+  if (!q) return;
+  const bm = getBookmarks();
+  if (bm[q.id]) {
+    delete bm[q.id];
+  } else {
+    bm[q.id] = {
+      questionId: q.id,
+      tags: buildAutoTags(q),
+      note: '',
+      createdAt: new Date().toISOString()
+    };
+  }
+  saveBookmarks(bm);
+  const btn = $('bookmarkBtn');
+  if (btn) {
+    btn.innerHTML = bm[q.id] ? '📑 Bookmarked ✓' : '📑 Bookmark';
+    btn.classList.toggle('active', !!bm[q.id]);
+  }
+}
+function removeBookmark(qId) {
+  const bm = getBookmarks();
+  delete bm[qId];
+  saveBookmarks(bm);
+  renderBookmarks();
+}
+function addBookmarkNote(qId, note) {
+  const bm = getBookmarks();
+  if (bm[qId]) {
+    bm[qId].note = note;
+    saveBookmarks(bm);
+  }
+}
+function renderBookmarks() {
+  const bm = getBookmarks();
+  const ids = Object.keys(bm);
+  $('bookmarkCount').textContent = `(${ids.length})`;
+  const list = $('bookmarksPreview');
+  if (ids.length === 0) {
+    list.innerHTML = '<p class="empty-state">No bookmarks yet. Bookmark questions while practicing to build your revision list.</p>';
+    return;
+  }
+  const qById = {};
+  GATE_QUESTIONS.forEach(q => qById[q.id] = q);
+  const items = ids.slice(0, 5).map(qId => {
+    const q = qById[qId];
+    if (!q) return '';
+    return `
+      <div class="history-item">
+        <div>
+          <div class="history-subject">${q.subject} > ${q.topic}</div>
+          <div class="history-date">GATE ${q.year} · ${q.type} · ${q.marks} mark</div>
+          <div class="bookmark-note" style="font-size:0.8rem;color:var(--text-muted)">${bm[qId].note ? '📝 ' + escapeHtml(bm[qId].note) : ''}</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span class="history-score-badge">${bm[qId].tags.slice(0,2).map(t => '#'+t).join(' ')}</span>
+          <button class="btn-remove-bookmark" onclick="removeBookmark('${qId}')">❌</button>
+        </div>
+      </div>`;
+  }).join('');
+  list.innerHTML = items + (ids.length > 5 ? `<p class="empty-state" style="text-align:center;padding:8px">+${ids.length - 5} more...</p>` : '');
+}
+
 // ─── Home Screen ──────────────────────────────────────────────
 function initHome() {
   renderStats();
   renderHistory();
+  renderBookmarks();
 
   // Dark mode default
   const darkToggle = $('darkModeToggle');
@@ -264,6 +344,13 @@ function renderQuestion(index) {
   const mrBtn = $('markReviewBtn');
   mrBtn.classList.toggle('active', !!state.markedForReview[q.id]);
   mrBtn.textContent = state.markedForReview[q.id] ? '🔖 Marked for Review' : '🔖 Mark for Review';
+
+  // Bookmark button state
+  const bmBtn = $('bookmarkBtn');
+  if (bmBtn) {
+    bmBtn.innerHTML = isBookmarked(q.id) ? '📑 Bookmarked ✓' : '📑 Bookmark';
+    bmBtn.classList.toggle('active', isBookmarked(q.id));
+  }
 
   // Options or NAT
   const optContainer = $('optionsContainer');
@@ -650,6 +737,7 @@ function initResultsEvents() {
   $('backHomeBtn').addEventListener('click', () => {
     renderStats();
     renderHistory();
+    renderBookmarks();
     showScreen('home');
   });
 }
