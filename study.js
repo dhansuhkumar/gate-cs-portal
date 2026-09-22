@@ -11,6 +11,8 @@ const IS_PRODUCTION = window.location.hostname !== 'localhost' && window.locatio
 const PDF_BASE_URL = IS_PRODUCTION
   ? 'https://github.com/dhansuhkumar/gate-cs-portal/releases/download/study-pdfs'
   : './pdfs';
+// CORS proxy for GitHub Releases (no CORS headers on direct URLs)
+const CORS_PROXY = IS_PRODUCTION ? 'https://api.allorigins.win/raw?url=' : '';
 
 const PDF_PATH_MAP = {
   'Algorithm_RBR_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_RBR_Notes.pdf`,
@@ -140,9 +142,13 @@ async function loadPDF(path, pageNumber = 1) {
   currentPdfPath = path;
   currentPage = pageNumber;
   try {
-    // pdf.js handles cross-origin if server sends CORS headers
-    // GitHub releases: Access-Control-Allow-Origin: *
-    const loadingTask = pdfjsLib.getDocument({ url: path, cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/', cMapPacked: true });
+    // Use CORS proxy for production GitHub Releases URLs
+    const proxiedUrl = CORS_PROXY + encodeURIComponent(path);
+    const loadingTask = pdfjsLib.getDocument({ 
+      url: proxiedUrl, 
+      cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/', 
+      cMapPacked: true 
+    });
     pdfDoc = await loadingTask.promise;
     renderPage(currentPage);
   } catch (err) {
