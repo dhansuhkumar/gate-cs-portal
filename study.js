@@ -7,32 +7,37 @@ let currentPdfPath = '';
 let currentPage = 1;
 let studyReturnScreen = 'home';
 
+const IS_PRODUCTION = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+const PDF_BASE_URL = IS_PRODUCTION
+  ? 'https://github.com/dhansuhkumar/gate-cs-portal/releases/download/study-pdfs'
+  : './pdfs';
+
 const PDF_PATH_MAP = {
-  'Algorithm_RBR_Notes.pdf': '../GATE_CSE/01_Algorithm/Algorithm_RBR_Notes.pdf',
-  'Algorithm_AppliedCourse_Notes.pdf': '../GATE_CSE/01_Algorithm/Algorithm_AppliedCourse_Notes.pdf',
-  'Algorithm_Madeeasy_Notes.pdf': '../GATE_CSE/01_Algorithm/Algorithm_Madeeasy_Notes.pdf',
-  'C_Programming_AppliedCourse_Notes.pdf': '../GATE_CSE/02_C_Programming/C_Programming_AppliedCourse_Notes.pdf',
-  'C_Programming_Madeeasy_Notes.pdf': '../GATE_CSE/02_C_Programming/C_Programming_Madeeasy_Notes.pdf',
-  'DataStructure_RBR_Notes.pdf': '../GATE_CSE/03_Data_Structure/DataStructure_RBR_Notes.pdf',
-  'DataStructure_AppliedCourse_Notes.pdf': '../GATE_CSE/03_Data_Structure/DataStructure_AppliedCourse_Notes.pdf',
-  'ComputerNetwork_RBR_Notes.pdf': '../GATE_CSE/04_Computer_Network/ComputerNetwork_RBR_Notes.pdf',
-  'ComputerNetwork_Madeeasy_Notes.pdf': '../GATE_CSE/04_Computer_Network/ComputerNetwork_Madeeasy_Notes.pdf',
-  'ComputerNetwork_AppliedCourse_1.pdf': '../GATE_CSE/04_Computer_Network/ComputerNetwork_AppliedCourse_1.pdf',
-  'ComputerNetwork_AppliedCourse_2.pdf': '../GATE_CSE/04_Computer_Network/ComputerNetwork_AppliedCourse_2.pdf',
-  'ComputerOrg_Madeeasy_Notes.pdf': '../GATE_CSE/05_Computer_Organization/ComputerOrg_Madeeasy_Notes.pdf',
-  'ComputerOrg_AppliedCourse_Notes.pdf': '../GATE_CSE/05_Computer_Organization/ComputerOrg_AppliedCourse_Notes.pdf',
-  'CompilerDesign_Madeeasy_Notes.pdf': '../GATE_CSE/06_Compiler_Design/CompilerDesign_Madeeasy_Notes.pdf',
-  'CompilerDesign_IGATE_Notes.pdf': '../GATE_CSE/06_Compiler_Design/CompilerDesign_IGATE_Notes.pdf',
-  'DBMS_RBR_Notes.pdf': '../GATE_CSE/07_DBMS/DBMS_RBR_Notes.pdf',
-  'DBMS_Madeeasy_Notes.pdf': '../GATE_CSE/07_DBMS/DBMS_Madeeasy_Notes.pdf',
-  'DBMS_AppliedCourse_Notes.pdf': '../GATE_CSE/07_DBMS/DBMS_AppliedCourse_Notes.pdf',
-  'DigitalLogic_RBR_Notes.pdf': '../GATE_CSE/08_Digital_Logic/DigitalLogic_RBR_Notes.pdf',
-  'DigitalLogic_Madeeasy_Notes.pdf': '../GATE_CSE/08_Digital_Logic/DigitalLogic_Madeeasy_Notes.pdf',
-  'SetTheory_RBR_Notes.pdf': '../GATE_CSE/09_Discrete_Mathematics/SetTheory_RBR_Notes.pdf',
-  'GraphTheory_RBR_Notes.pdf': '../GATE_CSE/09_Discrete_Mathematics/GraphTheory_RBR_Notes.pdf',
-  'Combinatorics_RBR_Notes.pdf': '../GATE_CSE/09_Discrete_Mathematics/Combinatorics_RBR_Notes.pdf',
-  'GATE_CSE_2026_Syllabus.pdf': '../GATE_CSE/13_Syllabus/GATE_CSE_2026_Syllabus.pdf',
-  'GATE_General_Aptitude_2026_Syllabus.pdf': '../GATE_CSE/13_Syllabus/GATE_General_Aptitude_2026_Syllabus.pdf'
+  'Algorithm_RBR_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_RBR_Notes.pdf`,
+  'Algorithm_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_AppliedCourse_Notes.pdf`,
+  'Algorithm_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_Madeeasy_Notes.pdf`,
+  'C_Programming_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/02_C_Programming/C_Programming_AppliedCourse_Notes.pdf`,
+  'C_Programming_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/02_C_Programming/C_Programming_Madeeasy_Notes.pdf`,
+  'DataStructure_RBR_Notes.pdf': `${PDF_BASE_URL}/03_Data_Structure/DataStructure_RBR_Notes.pdf`,
+  'DataStructure_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/03_Data_Structure/DataStructure_AppliedCourse_Notes.pdf`,
+  'ComputerNetwork_RBR_Notes.pdf': `${PDF_BASE_URL}/04_Computer_Network/ComputerNetwork_RBR_Notes.pdf`,
+  'ComputerNetwork_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/04_Computer_Network/ComputerNetwork_Madeeasy_Notes.pdf`,
+  'ComputerNetwork_AppliedCourse_1.pdf': `${PDF_BASE_URL}/04_Computer_Network/ComputerNetwork_AppliedCourse_1.pdf`,
+  'ComputerNetwork_AppliedCourse_2.pdf': `${PDF_BASE_URL}/04_Computer_Network/ComputerNetwork_AppliedCourse_2.pdf`,
+  'ComputerOrg_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/05_Computer_Organization/ComputerOrg_Madeeasy_Notes.pdf`,
+  'ComputerOrg_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/05_Computer_Organization/ComputerOrg_AppliedCourse_Notes.pdf`,
+  'CompilerDesign_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/06_Compiler_Design/CompilerDesign_Madeeasy_Notes.pdf`,
+  'CompilerDesign_IGATE_Notes.pdf': `${PDF_BASE_URL}/06_Compiler_Design/CompilerDesign_IGATE_Notes.pdf`,
+  'DBMS_RBR_Notes.pdf': `${PDF_BASE_URL}/07_DBMS/DBMS_RBR_Notes.pdf`,
+  'DBMS_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/07_DBMS/DBMS_Madeeasy_Notes.pdf`,
+  'DBMS_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/07_DBMS/DBMS_AppliedCourse_Notes.pdf`,
+  'DigitalLogic_RBR_Notes.pdf': `${PDF_BASE_URL}/08_Digital_Logic/DigitalLogic_RBR_Notes.pdf`,
+  'DigitalLogic_Madeeasy_Notes.pdf': `${PDF_BASE_URL}/08_Digital_Logic/DigitalLogic_Madeeasy_Notes.pdf`,
+  'SetTheory_RBR_Notes.pdf': `${PDF_BASE_URL}/09_Discrete_Mathematics/SetTheory_RBR_Notes.pdf`,
+  'GraphTheory_RBR_Notes.pdf': `${PDF_BASE_URL}/09_Discrete_Mathematics/GraphTheory_RBR_Notes.pdf`,
+  'Combinatorics_RBR_Notes.pdf': `${PDF_BASE_URL}/09_Discrete_Mathematics/Combinatorics_RBR_Notes.pdf`,
+  'GATE_CSE_2026_Syllabus.pdf': `${PDF_BASE_URL}/13_Syllabus/GATE_CSE_2026_Syllabus.pdf`,
+  'GATE_General_Aptitude_2026_Syllabus.pdf': `${PDF_BASE_URL}/13_Syllabus/GATE_General_Aptitude_2026_Syllabus.pdf`
 };
 
 function openStudy() {
@@ -135,10 +140,14 @@ async function loadPDF(path, pageNumber = 1) {
   currentPdfPath = path;
   currentPage = pageNumber;
   try {
-    pdfDoc = await pdfjsLib.getDocument(path).promise;
+    // pdf.js handles cross-origin if server sends CORS headers
+    // GitHub releases: Access-Control-Allow-Origin: *
+    const loadingTask = pdfjsLib.getDocument({ url: path, cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/', cMapPacked: true });
+    pdfDoc = await loadingTask.promise;
     renderPage(currentPage);
   } catch (err) {
-    $('pdfViewerTitle').textContent = '⚠️ Could not load PDF (CORS or missing). Serve over http and check path: ' + path;
+    console.error('PDF load error:', err);
+    $('pdfViewerTitle').textContent = `⚠️ Could not load PDF: ${err.message}. Path: ${path}`;
   }
 }
 

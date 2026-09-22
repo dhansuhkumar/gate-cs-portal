@@ -1,0 +1,21 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "devCommand": "npx serve . -p 3000",
+  "installCommand": "",
+  "routes": [
+    { "src": "/(.*)", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "dest": "/$1" },
+    { "src": "/sw.js", "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }, "dest": "/sw.js" },
+    { "src": "/manifest.json", "headers": { "Cache-Control": "no-cache" }, "dest": "/manifest.json" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
