@@ -768,6 +768,11 @@ input:checked + .slider:before { transform: translateX(24px); background: white;
   .exam-header { flex-wrap: wrap; gap: 10px; }
   .nav-buttons { width: 100%; justify-content: flex-end; }
   .question-actions { gap: 8px; }
+  .question-image { max-height: 50vh; padding: 4px; }
+}
+
+@media (max-width: 768px) {
+  .question-image { max-height: 60vh; }
 }
 
 /* ============================================================
@@ -790,6 +795,23 @@ input:checked + .slider:before { transform: translateX(24px); background: white;
   color: var(--text-muted);
   margin-top: 10px;
   font-style: italic;
+}
+
+/* ─── Question Images (markdown ![alt](url)) ──────────────────── */
+.question-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.15);
+  padding: 8px;
+  box-shadow: var(--shadow-card);
+}
+.question-text .question-image {
+  max-width: 100%;
+  max-height: 60vh;
 }
 
 /* ─── SVG Diagrams ───────────────────────────────────────────── */

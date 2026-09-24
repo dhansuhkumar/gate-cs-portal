@@ -60,7 +60,18 @@ const DR = {
    */
   renderMath(text) {
     if (!text) return '';
-    let result = escapeHtml(text);
+    
+    // First: Convert markdown images ![alt](url) to <img> tags BEFORE escaping
+    let result = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, url) => {
+      return `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" class="question-image" loading="lazy">`;
+    });
+    
+    // Then escape remaining HTML
+    result = escapeHtml(result);
+    
+    // Restore the <img> tags (they got escaped)
+    result = result.replace(/<img src="([^&]+)" alt="([^&]+)" class="question-image" loading="lazy">/g,
+      '<img src="$1" alt="$2" class="question-image" loading="lazy">');
 
     // If KaTeX is loaded, render math
     if (typeof katex !== 'undefined') {
