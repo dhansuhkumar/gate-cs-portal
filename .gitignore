@@ -2,3 +2,5 @@
 pdfs/
 node_modules/
 
+*.log
+scripts/wrangler-login.*
