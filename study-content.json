@@ -1699,5 +1699,2066 @@
   "pageEnd": 1,
   "content": "",
   "keyFormulas": []
+ },
+ {
+  "subject": "Algorithms",
+  "chapter": "Book CLRS DS Algo",
+  "sourcePDF": "Book_CLRS_DS_Algo.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Algorithms",
+  "chapter": "Algorithms",
+  "sourcePDF": "Algorithms.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Algorithms",
+  "chapter": "803purl Algorithms TYS",
+  "sourcePDF": "803purl_Algorithms_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Algorithms",
+  "chapter": "Algorithms workbook",
+  "sourcePDF": "Algorithms workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Algorithms",
+  "chapter": "MainNotes ADA",
+  "sourcePDF": "MainNotes_ADA.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "Book Kernighan Ritchie C",
+  "sourcePDF": "Book_Kernighan_Ritchie_C.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "Programming",
+  "sourcePDF": "Programming.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "804purl PandDS TYS",
+  "sourcePDF": "804purl_PandDS_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "MainNotes C",
+  "sourcePDF": "MainNotes_C.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "C Advance 2022 answers keys",
+  "sourcePDF": "C Advance 2022 answers keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "C programming Advanced sheet 2022",
+  "sourcePDF": "C programming Advanced sheet _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "Basic C programming Answer Keys",
+  "sourcePDF": "Basic C programming Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "C Programming",
+  "chapter": "C Programming Language Questions",
+  "sourcePDF": "C Programming Language Questions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "DataStructures",
+  "sourcePDF": "DataStructures.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "DataStructures workbook 2021",
+  "sourcePDF": "DataStructures workbook 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "DataStructures workbook",
+  "sourcePDF": "DataStructures workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "MainNotes DS",
+  "sourcePDF": "MainNotes_DS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Advanced DSA 2023 Solutions",
+  "sourcePDF": "Advanced DSA 2023 Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Advanced DSA 2023 sheet Answer Keys",
+  "sourcePDF": "Advanced DSA 2023 sheet Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Advanced DSA sheet 2023",
+  "sourcePDF": "Advanced DSA sheet 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "ADA DSA Sheet Questions",
+  "sourcePDF": "ADA DSA  Sheet Questions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "ADA Sheet Answer Keys 2022",
+  "sourcePDF": "ADA Sheet Answer Keys 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "ADA sheet - Back side sloution",
+  "sourcePDF": "ADA sheet - Back side sloution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Asymptotic complexity Solution",
+  "sourcePDF": "Asymptotic complexity Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Data structures Solutions",
+  "sourcePDF": "Data structures Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Program Design Strategy with solution 2021",
+  "sourcePDF": "Program Design Strategy with solution 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Searching & Sorting sheet sloution",
+  "sourcePDF": "Searching & Sorting sheet sloution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Tree Solution",
+  "sourcePDF": "Tree Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Baisc DSA Sheet final",
+  "sourcePDF": "Baisc DSA Sheet final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "DSA Basic Answer Key",
+  "sourcePDF": "DSA Basic Answer Key.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Asymptotic Complexity Basic Solution",
+  "sourcePDF": "Asymptotic Complexity Basic Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Data Structure I Basic solution final(Stack Queue Linked list)",
+  "sourcePDF": "Data Structure I Basic solution final(Stack Queue Linked list).pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Data Structure II (Tree & Graphs) Basic Solution",
+  "sourcePDF": "Data Structure II (Tree & Graphs) Basic  Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Program Design Strategy Basic Solution final",
+  "sourcePDF": "Program Design Strategy Basic Solution final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Data Structures",
+  "chapter": "Searching sorting Basic Solution final",
+  "sourcePDF": "Searching sorting Basic Solution final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Book Forouzan CN",
+  "sourcePDF": "Book_Forouzan_CN.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Book Peterson CN",
+  "sourcePDF": "Book_Peterson_CN.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Book Tanenbaum CN",
+  "sourcePDF": "Book_Tanenbaum_CN.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Book Tanenbaum CN Solutions",
+  "sourcePDF": "Book_Tanenbaum_CN_Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Computer Networks (www.gate2016.info)",
+  "sourcePDF": "Computer Networks (www.gate2016.info).pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch01",
+  "sourcePDF": "ch01.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch02",
+  "sourcePDF": "ch02.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch03-1",
+  "sourcePDF": "ch03-1.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch04-digital-transmission",
+  "sourcePDF": "ch04-digital-transmission.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch05-analog-transmission",
+  "sourcePDF": "ch05-analog-transmission.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch06-bandwidth-utilization",
+  "sourcePDF": "ch06-bandwidth-utilization.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch07-transmission-media",
+  "sourcePDF": "ch07-transmission-media.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch10-error-detection-and-correction",
+  "sourcePDF": "ch10-error-detection-and-correction.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch11-data-link-control",
+  "sourcePDF": "ch11-data-link-control.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch12-multiple-access",
+  "sourcePDF": "ch12-multiple-access.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch13-wired-lans-ethernet",
+  "sourcePDF": "ch13-wired-lans-ethernet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch14-wireless-lans",
+  "sourcePDF": "ch14-wireless-lans.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch19-network-layer-logical-addressing",
+  "sourcePDF": "ch19-network-layer-logical-addressing.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch20-network-layer-internet-protocol",
+  "sourcePDF": "ch20-network-layer-internet-protocol.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch21-network-layer-address-mapping-error-reporting-multicasting",
+  "sourcePDF": "ch21-network-layer-address-mapping-error-reporting-multicasting.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch22-network-layer-routing-forwarding-and-delivery",
+  "sourcePDF": "ch22-network-layer-routing-forwarding-and-delivery.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch23-udp-tcp-sctp",
+  "sourcePDF": "ch23-udp-tcp-sctp.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch24-congestion-control-and-quality-of-service",
+  "sourcePDF": "ch24-congestion-control-and-quality-of-service.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch25-domain-name-system",
+  "sourcePDF": "ch25-domain-name-system.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch26-remote-logging-electronic-mail-file-transfer",
+  "sourcePDF": "ch26-remote-logging-electronic-mail-file-transfer.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch27-www-and-http",
+  "sourcePDF": "ch27-www-and-http.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ch30-cryptography-2",
+  "sourcePDF": "ch30-cryptography-2.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ComputerNetwork",
+  "sourcePDF": "ComputerNetwork.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "806purl Computer-Networks TYS",
+  "sourcePDF": "806purl_Computer-Networks_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ComputerNetwork workbook",
+  "sourcePDF": "ComputerNetwork  workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "ComputerNetwork workbook 2021",
+  "sourcePDF": "ComputerNetwork workbook 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "MainNotes CN",
+  "sourcePDF": "MainNotes_CN.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Advanced Computer Network Answer Keys - 2022",
+  "sourcePDF": "Advanced Computer Network Answer Keys - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Advanced Computer Network Final 2022",
+  "sourcePDF": "Advanced Computer Network Final 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Advanced Computer Network Sheet Solution - 2022",
+  "sourcePDF": "Advanced Computer Network Sheet Solution - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Computer Network Advance Answer Key",
+  "sourcePDF": "Computer Network Advance Answer Key.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Computer Network Advance Sheet",
+  "sourcePDF": "Computer Network Advance Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Computer Network Advance With sloution",
+  "sourcePDF": "Computer Network Advance With sloution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "Basic Computer Network Answer Keys",
+  "sourcePDF": "Basic Computer Network Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "CN Basic Questions Only",
+  "sourcePDF": "CN Basic  Questions Only.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "1 ISO-OSI and TCP-IP Protocol Stacks",
+  "sourcePDF": "1 ISO-OSI and TCP-IP Protocol Stacks.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "2 Data Link Layer Error Control",
+  "sourcePDF": "2 Data Link Layer Error Control.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "3 Data Link Layer Flow Control",
+  "sourcePDF": "3 Data Link Layer Flow Control.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "4 Data Link Layer Medium Access Control solutions",
+  "sourcePDF": "4 Data Link Layer Medium Access Control solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "5 Network Layer Solutions",
+  "sourcePDF": "5 Network Layer Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "6 Transport Layer Solutions",
+  "sourcePDF": "6 Transport Layer Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Networks",
+  "chapter": "7 Application Layer Solutions",
+  "sourcePDF": "7 Application Layer Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Book Hamacher COA",
+  "sourcePDF": "Book_Hamacher_COA.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Book Hennessy Patterson COA",
+  "sourcePDF": "Book_Hennessy_Patterson_COA.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "COA",
+  "sourcePDF": "COA.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "COAWBAnswerKeys",
+  "sourcePDF": "COAWBAnswerKeys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "1001purl COA TYS",
+  "sourcePDF": "1001purl_COA_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "COA workbook",
+  "sourcePDF": "COA workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "MainNotes COA",
+  "sourcePDF": "MainNotes_COA.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "ADVANCED CSO Sheet Anwers",
+  "sourcePDF": "ADVANCED CSO Sheet Anwers.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Advance CSO Sloution 2022",
+  "sourcePDF": "Advance CSO Sloution 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Advance CSO sheet 2022",
+  "sourcePDF": "Advance CSO_sheet 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "ADVANCE CSO ANSWER KEY",
+  "sourcePDF": "ADVANCE CSO ANSWER KEY.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Advance CSO Sheet Solution 2023",
+  "sourcePDF": "Advance CSO Sheet Solution 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Advanced CSO Sheet 2023",
+  "sourcePDF": "Advanced CSO Sheet 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Basic Cache Memory (COA) Module with Solution - 2022",
+  "sourcePDF": "Basic Cache Memory (COA) Module with Solution - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Basic Cache Memory Answer key - 2022",
+  "sourcePDF": "Basic Cache Memory Answer key - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Basic CSO Sheet Answer key",
+  "sourcePDF": "Basic CSO Sheet Answer key.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "Basic CSO Sheet Solution",
+  "sourcePDF": "Basic CSO Sheet Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Computer Organization",
+  "chapter": "CSO sheet Basic",
+  "sourcePDF": "CSO sheet  Basic.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Book Aho Ullmann CD",
+  "sourcePDF": "Book_Aho_Ullmann_CD.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "CompilerDesign",
+  "sourcePDF": "CompilerDesign.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "805purl Compiler-Design TYS",
+  "sourcePDF": "805purl_Compiler-Design_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "CompilerDesign workbook",
+  "sourcePDF": "CompilerDesign workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "MainNotes CD",
+  "sourcePDF": "MainNotes_CD.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Advance Compiler Sheet Solution 2022",
+  "sourcePDF": "Advance Compiler Sheet  Solution _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Advance Compiler Sheet 2022",
+  "sourcePDF": "Advance Compiler Sheet _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Basic Compiler Answer Keys",
+  "sourcePDF": "Basic Compiler Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Compiler Advance Sheet 2023",
+  "sourcePDF": "Compiler Advance Sheet _2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Compiler Advanced 2023 sheet Solutions",
+  "sourcePDF": "Compiler Advanced 2023 sheet Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Compiler advance answer key",
+  "sourcePDF": "Compiler advance answer key.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Basic Compiler Sheet",
+  "sourcePDF": "Basic Compiler Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Compiler Design",
+  "chapter": "Basic compiler Sheet Solution",
+  "sourcePDF": "Basic compiler Sheet Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Book Conolly DBMS",
+  "sourcePDF": "Book_Conolly_DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Book Korth DBMS",
+  "sourcePDF": "Book_Korth_DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Book Navathe DBMS",
+  "sourcePDF": "Book_Navathe_DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Book Ullman DBMS",
+  "sourcePDF": "Book_Ullman_DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "DBMS",
+  "sourcePDF": "DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "809purl Databases TYS",
+  "sourcePDF": "809purl_Databases_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "DBMS workbook",
+  "sourcePDF": "DBMS  workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "MainNotes DBMS",
+  "sourcePDF": "MainNotes_DBMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "ADVANCED DBMS Answer Keys",
+  "sourcePDF": "ADVANCED DBMS Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Advanced DBMS Sheet 2022",
+  "sourcePDF": "Advanced DBMS Sheet _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Advanced DBMS Sheet with Sloution 2022",
+  "sourcePDF": "Advanced DBMS Sheet with Sloution_2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Advance DBMS Answer Keys",
+  "sourcePDF": "Advance DBMS Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "Advanced DBMS 2023",
+  "sourcePDF": "Advanced DBMS 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "DBMS Basic sheet",
+  "sourcePDF": "DBMS Basic  sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "DBMS Basic Answers",
+  "sourcePDF": "DBMS Basic Answers.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "DBMS",
+  "chapter": "DBMS Sheet Sloution",
+  "sourcePDF": "DBMS Sheet Sloution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Book Mano DLD",
+  "sourcePDF": "Book_Mano_DLD.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "DigitalLogic",
+  "sourcePDF": "DigitalLogic.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "810purl Digital-Logic TYS",
+  "sourcePDF": "810purl_Digital-Logic_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "DigitalLogic workbook 2021",
+  "sourcePDF": "DigitalLogic workbook 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "DigitalLogic workbook",
+  "sourcePDF": "DigitalLogic workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "MainNotes DELD",
+  "sourcePDF": "MainNotes_DELD.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Advance Digital Logic Booklet Answer Key - 2022",
+  "sourcePDF": "Advance Digital Logic Booklet Answer Key - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Advance Digital Logic Booklet Sloution - 2022",
+  "sourcePDF": "Advance Digital Logic Booklet Sloution - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Advance Digital Logic sheet 2022",
+  "sourcePDF": "Advance Digital Logic sheet _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Digital Advanced 2023",
+  "sourcePDF": "Digital Advanced 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Digital Advanced Solution 2023",
+  "sourcePDF": "Digital Advanced Solution 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Digital Sheet Answer2023",
+  "sourcePDF": "Digital Sheet Answer2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Basic Digital Booklet Answer Keys",
+  "sourcePDF": "Basic Digital Booklet Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Basic Digital Booklet Solution",
+  "sourcePDF": "Basic Digital Booklet Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Digital Logic",
+  "chapter": "Digital Basic Sheet",
+  "sourcePDF": "Digital_Basic  Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Book Discrete Combinatorial Handbook",
+  "sourcePDF": "Book_Discrete_Combinatorial_Handbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Book Rosen Discrete",
+  "sourcePDF": "Book_Rosen_Discrete.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete-RV-Cheat-Sheet",
+  "sourcePDF": "Discrete-RV-Cheat-Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete&EngineeringMathematics",
+  "sourcePDF": "Discrete&EngineeringMathematics.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "807purl DEM TYS",
+  "sourcePDF": "807purl_DEM_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete&EngineeringMathematics workbook 2021",
+  "sourcePDF": "Discrete&EngineeringMathematics  workbook 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete&EngineeringMathematics workbook",
+  "sourcePDF": "Discrete&EngineeringMathematics  workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "MainNotes DMS",
+  "sourcePDF": "MainNotes_DMS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Advance Sheet 2023",
+  "sourcePDF": "Discrete Advance Sheet 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Advance sloution 2023",
+  "sourcePDF": "Discrete Advance sloution 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Questions Sheet Final",
+  "sourcePDF": "Discrete  Questions Sheet _Final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Sheet Answers keys 2021-22",
+  "sourcePDF": "Discrete Sheet Answers keys 2021-22.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Sheet back side test",
+  "sourcePDF": "Discrete Sheet back side test.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Graph Theory",
+  "sourcePDF": "Graph Theory.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Group Theory",
+  "sourcePDF": "Group Theory.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Logic",
+  "sourcePDF": "Logic.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Relations and Functions",
+  "sourcePDF": "Relations and Functions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Set - Theory",
+  "sourcePDF": "Set - Theory.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Baisc Discrete Sheet",
+  "sourcePDF": "Baisc Discrete Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Discrete Basic Answer key",
+  "sourcePDF": "Discrete Basic Answer key.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Graph Theory Basic Solution final",
+  "sourcePDF": "Graph Theory Basic Solution final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Group Theory Basic Solution final",
+  "sourcePDF": "Group Theory Basic Solution final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Logic Basic Solution Final",
+  "sourcePDF": "Logic Basic Solution Final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "Relation function basic solution",
+  "sourcePDF": "Relation function basic solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Discrete Mathematics",
+  "chapter": "set theory basic solution",
+  "sourcePDF": "set theory basic solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Aptitude DI",
+  "sourcePDF": "Aptitude_DI.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Engg Math Free Course Ashish Ranjan",
+  "sourcePDF": "Engg_Math_Free_Course_Ashish_Ranjan.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "GO-Aptitude",
+  "sourcePDF": "GO-Aptitude.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "EnggMathematicsWorkbook",
+  "sourcePDF": "EnggMathematicsWorkbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "English",
+  "sourcePDF": "English.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "ReasoningandAptitude",
+  "sourcePDF": "ReasoningandAptitude.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "English workbook 2023",
+  "sourcePDF": "English workbook 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "ReasoningandAptitude workbook 2023",
+  "sourcePDF": "ReasoningandAptitude workbook 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Aptitude answer key 2022",
+  "sourcePDF": "Aptitude answer key 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "General Aptitude sheet sloution 2022-converted",
+  "sourcePDF": "General Aptitude sheet sloution _2022-converted.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "General Aptitude sheet 2022",
+  "sourcePDF": "General Aptitude sheet_2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Calculus Sheet 2022 Solution",
+  "sourcePDF": "Calculus Sheet _2022 Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Maths Sheet 2022",
+  "sourcePDF": "Maths  Sheet_2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Maths sheet Answers key 2022",
+  "sourcePDF": "Maths sheet Answers key_2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Matrices 2022 sloution file",
+  "sourcePDF": "Matrices_2022_sloution file.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Permutation and Combination Solution Sheet 2022 Final",
+  "sourcePDF": "Permutation and Combination Solution  Sheet _2022 Final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Engineering Mathematics",
+  "chapter": "Probability Sheet Sloution 2022",
+  "sourcePDF": "Probability Sheet Sloution _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Book Tanenbaum OS",
+  "sourcePDF": "Book_Tanenbaum_OS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OperatingSystem",
+  "sourcePDF": "OperatingSystem.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "808purl Operating-System TYS",
+  "sourcePDF": "808purl_Operating-System_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OperatingSystem workbook",
+  "sourcePDF": "OperatingSystem  workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "MainNotes OS",
+  "sourcePDF": "MainNotes_OS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Advance Operating System Final 2022 sheet",
+  "sourcePDF": "Advance Operating System Final 2022 sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Advanced Operating System Answer Keys - 2022",
+  "sourcePDF": "Advanced Operating System Answer Keys - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Advanced Operating System Solution - 2022",
+  "sourcePDF": "Advanced Operating System Solution - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OS Advance Answer Keys",
+  "sourcePDF": "OS Advance Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OS Advance Sheet Solution",
+  "sourcePDF": "OS Advance Sheet Solution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OS Advance Sheet",
+  "sourcePDF": "OS Advance Sheet.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Basic Operating System Answer Keys - 2022",
+  "sourcePDF": "Basic Operating System Answer Keys - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "Basic Operating System Solution - 2022",
+  "sourcePDF": "Basic Operating System Solution - 2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Operating System",
+  "chapter": "OS 2022 Basic Questions Only",
+  "sourcePDF": "OS 2022 Basic Questions Only.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Book Hopcraft TOC",
+  "sourcePDF": "Book_Hopcraft_TOC.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Book Sipser TOC",
+  "sourcePDF": "Book_Sipser_TOC.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC",
+  "sourcePDF": "TOC.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "811purl TOC TYS",
+  "sourcePDF": "811purl_TOC_TYS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC workbook",
+  "sourcePDF": "TOC workbook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "MainNotes TOC",
+  "sourcePDF": "MainNotes_TOC.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Theory of Computation technical book 2021",
+  "sourcePDF": "Theory of Computation technical book 2021.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "ADVANCED Toc Sheet 2022 Anwers",
+  "sourcePDF": "ADVANCED Toc Sheet 2022 Anwers.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Adavnced sheet Solution 2022",
+  "sourcePDF": "TOC Adavnced sheet Solution  _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Adavnced sheet 2022",
+  "sourcePDF": "TOC Adavnced sheet _2022.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Adavnced sheet 2023",
+  "sourcePDF": "TOC Adavnced sheet _2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Advance 2023 Answer Keys",
+  "sourcePDF": "TOC Advance 2023 Answer Keys.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Advance 2023 Solutions",
+  "sourcePDF": "TOC Advance 2023 Solutions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Basic TOC 2022 Solution of CFL TM & Backside Test",
+  "sourcePDF": "Basic TOC 2022_ Solution of CFL _TM & Backside Test.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Basic TOC Regular sloution",
+  "sourcePDF": "Basic TOC Regular_ sloution.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "TOC Basic Final",
+  "sourcePDF": "TOC Basic Final.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Theory of Computation",
+  "chapter": "Toc Answer Key Basic",
+  "sourcePDF": "Toc Answer Key Basic.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Ace Academy Bits & Bytes 3",
+  "sourcePDF": "Ace Academy Bits & Bytes 3.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Bits&Bytes Vol1(without solution)",
+  "sourcePDF": "Bits&Bytes_Vol1(without solution).pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Bits&Bytes Vol2(without solution)",
+  "sourcePDF": "Bits&Bytes_Vol2(without solution).pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "GATE-O-PEDIA CS IT",
+  "sourcePDF": "GATE-O-PEDIA_CS_IT.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "GATE2020 Disha Material",
+  "sourcePDF": "GATE2020_Disha_Material.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "GATE2020 ImpQuestions ACE",
+  "sourcePDF": "GATE2020_ImpQuestions_ACE.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "GATE 2023 CS IT Syllabus",
+  "sourcePDF": "GATE_2023_CS_IT_Syllabus.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "GATE CSE Standard Book Questions",
+  "sourcePDF": "GATE_CSE_Standard_Book_Questions.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Gate Pearson WorkBook",
+  "sourcePDF": "Gate_Pearson_WorkBook.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Handbook MadeEasy CS",
+  "sourcePDF": "Handbook_MadeEasy_CS.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "Revision CS GATE2020 MadeEasy",
+  "sourcePDF": "Revision_CS_GATE2020_MadeEasy.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
+ },
+ {
+  "subject": "Syllabus & Revision",
+  "chapter": "DM Advance Sheet Answer keys 2023",
+  "sourcePDF": "DM Advance Sheet Answer keys 2023.pdf",
+  "pageStart": 1,
+  "pageEnd": 1,
+  "content": "",
+  "keyFormulas": []
  }
 ]

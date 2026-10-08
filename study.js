@@ -21,9 +21,14 @@ fetch('pdf-manifest.json')
   .catch(() => { pdfManifest = {}; });
 
 function resolvePdfPath(name) {
+  if (pdfManifest && pdfManifest[name]) {
+    // GitHub release assets: spaces -> dots (runs of dots collapsed) in asset names
+    const assetName = IS_PRODUCTION
+      ? name.replace(/ /g, '.').replace(/\.{2,}/g, '.')
+      : pdfManifest[name];
+    return `${PDF_BASE_URL}/${assetName}`;
+  }
   if (PDF_PATH_MAP[name]) return PDF_PATH_MAP[name];
-  const rel = pdfManifest && pdfManifest[name];
-  if (rel) return `${PDF_BASE_URL}/${rel}`;
   return null;
 }
 
@@ -54,6 +59,13 @@ const PDF_PATH_MAP = {
   'GATE_CSE_2026_Syllabus.pdf': `${PDF_BASE_URL}/13_Syllabus/GATE_CSE_2026_Syllabus.pdf`,
   'GATE_General_Aptitude_2026_Syllabus.pdf': `${PDF_BASE_URL}/13_Syllabus/GATE_General_Aptitude_2026_Syllabus.pdf`
 };
+
+// GitHub release assets are flat basenames (spaces -> dots) — normalize in production
+if (IS_PRODUCTION) {
+  for (const key of Object.keys(PDF_PATH_MAP)) {
+    PDF_PATH_MAP[key] = `${PDF_BASE_URL}/${key.replace(/ /g, '.').replace(/\.{2,}/g, '.')}`;
+  }
+}
 
 function openStudy() {
   if (typeof showScreen !== 'function') { console.error('app.js not loaded'); return; }
