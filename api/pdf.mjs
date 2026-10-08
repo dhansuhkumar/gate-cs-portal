@@ -29,11 +29,12 @@ export default async function handler(request) {
 
     const headers = new Headers();
     headers.set('Content-Type', 'application/pdf');
-    const passthrough = ['content-length', 'content-range', 'accept-ranges'];
+    const passthrough = ['content-length', 'content-range'];
     for (const h of passthrough) {
       const v = upstream.headers.get(h);
       if (v) headers.set(h, v);
     }
+    headers.set('Accept-Ranges', 'bytes');
     headers.set('Cache-Control', 'no-store');
 
     return new Response(upstream.body, { status: upstream.status, headers });
