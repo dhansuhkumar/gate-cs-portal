@@ -1,0 +1,5 @@
+pdfs/
+.git/
+cors-proxy-worker.js
+*.log
+node_modules/

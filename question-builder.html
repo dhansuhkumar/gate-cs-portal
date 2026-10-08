@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GATE CS — Question Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="builder/builder.css">
+</head>
+<body class="dark">
+
+<!-- ===== HEADER BAR ===== -->
+<header class="builder-header">
+  <div class="builder-header-left">
+    <a href="index.html" class="btn-back">← Home</a>
+    <div class="builder-logo">GATE CS</div>
+    <h1 class="builder-title">Question Builder</h1>
+    <span class="builder-count" id="questionCountBadge">0 saved</span>
+  </div>
+  <div class="builder-header-right">
+    <button class="btn-outline" id="loadJsonBtn">📂 Load JSON</button>
+    <button class="btn-primary" id="exportBtn">💾 Export All</button>
+  </div>
+</header>
+
+<!-- ===== MAIN LAYOUT ===== -->
+<div class="builder-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="builder-sidebar" id="sidebar">
+    <!-- Question Meta -->
+    <div class="sidebar-section">
+      <h3 class="sidebar-heading">Question Meta</h3>
+      <div class="meta-field">
+        <label>Subject</label>
+        <select id="subjectSelect">
+          <option value="Discrete Mathematics">Discrete Mathematics</option>
+          <option value="Algorithms">Algorithms</option>
+          <option value="Data Structures">Data Structures</option>
+          <option value="Operating Systems">Operating Systems</option>
+          <option value="Theory of Computation">Theory of Computation</option>
+          <option value="DBMS">DBMS</option>
+          <option value="Computer Networks">Computer Networks</option>
+          <option value="Computer Organization">Computer Organization</option>
+          <option value="Compiler Design">Compiler Design</option>
+          <option value="Digital Logic">Digital Logic</option>
+          <option value="Programming">Programming</option>
+          <option value="Engineering Mathematics">Engineering Mathematics</option>
+        </select>
+      </div>
+      <div class="meta-field">
+        <label>Topic</label>
+        <input type="text" id="topicInput" placeholder="e.g. Graph Theory, Dynamic Programming...">
+      </div>
+      <div class="meta-row">
+        <div class="meta-field">
+          <label>Year</label>
+          <select id="yearSelect">
+            <option value="2024">2024</option>
+            <option value="2023" selected>2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+          </select>
+        </div>
+        <div class="meta-field">
+          <label>Marks</label>
+          <select id="marksSelect">
+            <option value="1">1 mark</option>
+            <option value="2" selected>2 marks</option>
+          </select>
+        </div>
+      </div>
+      <div class="meta-field">
+        <label>Type</label>
+        <div class="type-tabs">
+          <button class="type-tab active" data-type="MCQ">MCQ</button>
+          <button class="type-tab" data-type="MSQ">MSQ</button>
+          <button class="type-tab" data-type="NAT">NAT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Options Editor (MCQ/MSQ) -->
+    <div class="sidebar-section" id="optionsSection">
+      <h3 class="sidebar-heading">Options</h3>
+      <div id="optionsEditor">
+        <div class="option-row" data-idx="0">
+          <span class="option-letter">A</span>
+          <input type="text" class="option-input" placeholder="Option A">
+          <label class="correct-check" title="Correct answer"><input type="radio" name="correctAnswer" value="0"><span>✓</span></label>
+        </div>
+        <div class="option-row" data-idx="1">
+          <span class="option-letter">B</span>
+          <input type="text" class="option-input" placeholder="Option B">
+          <label class="correct-check" title="Correct answer"><input type="radio" name="correctAnswer" value="1"><span>✓</span></label>
+        </div>
+        <div class="option-row" data-idx="2">
+          <span class="option-letter">C</span>
+          <input type="text" class="option-input" placeholder="Option C">
+          <label class="correct-check" title="Correct answer"><input type="radio" name="correctAnswer" value="2"><span>✓</span></label>
+        </div>
+        <div class="option-row" data-idx="3">
+          <span class="option-letter">D</span>
+          <input type="text" class="option-input" placeholder="Option D">
+          <label class="correct-check" title="Correct answer"><input type="radio" name="correctAnswer" value="3"><span>✓</span></label>
+        </div>
+      </div>
+      <button class="btn-small" id="addOptionBtn">+ Add Option</button>
+    </div>
+
+    <!-- NAT Answer (hidden by default) -->
+    <div class="sidebar-section hidden" id="natSection">
+      <h3 class="sidebar-heading">NAT Answer</h3>
+      <input type="text" id="natAnswerInput" class="nat-answer-input" placeholder="Enter numerical answer">
+    </div>
+
+    <!-- Explanation -->
+    <div class="sidebar-section">
+      <h3 class="sidebar-heading">Explanation</h3>
+      <textarea id="explanationInput" class="explanation-textarea" rows="5" placeholder="Write the solution explanation here. Use $...$ for inline math."></textarea>
+    </div>
+
+    <!-- Diagram Palette -->
+    <div class="sidebar-section">
+      <h3 class="sidebar-heading">Add Diagram</h3>
+      <div class="diagram-palette">
+        <button class="palette-btn" data-diagram="graph">📊 Graph</button>
+        <button class="palette-btn" data-diagram="tree">🌳 Tree</button>
+        <button class="palette-btn" data-diagram="automaton">🤖 DFA/NFA</button>
+        <button class="palette-btn" data-diagram="kmap">🗺 K-Map</button>
+        <button class="palette-btn" data-diagram="table">📋 Table</button>
+        <button class="palette-btn" data-diagram="code">💻 Code</button>
+        <button class="palette-btn" data-diagram="gantt">📅 Gantt</button>
+        <button class="palette-btn" data-diagram="circuit">⚡ Circuit</button>
+        <button class="palette-btn" data-diagram="memory">🧱 Memory</button>
+        <button class="palette-btn" data-diagram="image">🖼 Image</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN EDITOR AREA -->
+  <main class="builder-main">
+    <!-- Math Toolbar -->
+    <div class="math-toolbar">
+      <button class="math-btn" id="insertInlineMath" title="Insert inline math (Ctrl+M)">$ Inline Math</button>
+      <button class="math-btn" id="insertBlockMath" title="Insert block math (Ctrl+Shift+M)">$$ Block Math</button>
+      <span class="math-sep"></span>
+      <button class="math-btn" id="insertSymbol">∑ Symbols</button>
+    </div>
+
+    <!-- ProseMirror Editor -->
+    <div class="editor-wrapper">
+      <div id="editorContainer" class="editor-container"></div>
+    </div>
+
+    <!-- Diagram Display Area -->
+    <div class="diagram-area hidden" id="diagramArea">
+      <div class="diagram-area-header">
+        <span class="diagram-type-label" id="diagramTypeLabel">Diagram</span>
+        <div class="diagram-area-actions">
+          <button class="btn-small" id="editDiagramBtn">✏️ Edit</button>
+          <button class="btn-small btn-danger" id="removeDiagramBtn">🗑 Remove</button>
+        </div>
+      </div>
+      <div class="diagram-preview" id="diagramPreview"></div>
+      <input type="text" id="diagramCaption" class="diagram-caption-input" placeholder="Diagram caption (optional)">
+    </div>
+
+    <!-- Diagram Editor Modal -->
+    <div class="diagram-editor-modal hidden" id="diagramEditorModal">
+      <div class="diagram-editor-content" id="diagramEditorContent"></div>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="preview-section">
+      <div class="preview-header">
+        <span>Live Preview</span>
+        <button class="btn-small" id="togglePreview">Toggle</button>
+      </div>
+      <div class="preview-body" id="previewBody">
+        <div class="preview-meta" id="previewMeta"></div>
+        <div class="preview-question" id="previewQuestion"></div>
+        <div class="preview-diagram" id="previewDiagram"></div>
+        <div class="preview-options" id="previewOptions"></div>
+        <div class="preview-explanation" id="previewExplanation"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ===== SAVE BUTTON (FAB) ===== -->
+<button class="save-fab" id="saveBtn" title="Save Question (Ctrl+S)">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+  <span>Save</span>
+</button>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ===== MATH INPUT MODAL ===== -->
+<div class="modal-overlay hidden" id="mathModal">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <div class="modal-title">📐 LaTeX Math Input</div>
+      <button class="modal-close" id="closeMathModal">✕</button>
+    </div>
+    <div class="modal-body">
+      <label class="math-label">LaTeX Expression:</label>
+      <textarea id="mathLatexInput" class="math-latex-input" rows="3" placeholder="e.g. \frac{n^2}{2}, \sum_{i=1}^{n} i, \forall x \in S"></textarea>
+      <div class="math-preview-label">Preview:</div>
+      <div id="mathPreview" class="math-preview-box"></div>
+      <div class="math-symbols">
+        <button class="sym-btn" data-sym="\\frac{a}{b}">a/b</button>
+        <button class="sym-btn" data-sym="\\sum_{i=1}^{n}">∑</button>
+        <button class="sym-btn" data-sym="\\int_{a}^{b}">∫</button>
+        <button class="sym-btn" data-sym="\\sqrt{x}">√</button>
+        <button class="sym-btn" data-sym="\\forall">∀</button>
+        <button class="sym-btn" data-sym="\\exists">∃</button>
+        <button class="sym-btn" data-sym="\\in">∈</button>
+        <button class="sym-btn" data-sym="\\notin">∉</button>
+        <button class="sym-btn" data-sym="\\subset">⊂</button>
+        <button class="sym-btn" data-sym="\\subseteq">⊆</button>
+        <button class="sym-btn" data-sym="\\cup">∪</button>
+        <button class="sym-btn" data-sym="\\cap">∩</button>
+        <button class="sym-btn" data-sym="\\emptyset">∅</button>
+        <button class="sym-btn" data-sym="\\neg">¬</button>
+        <button class="sym-btn" data-sym="\\land">∧</button>
+        <button class="sym-btn" data-sym="\\lor">∨</button>
+        <button class="sym-btn" data-sym="\\to">→</button>
+        <button class="sym-btn" data-sym="\\leftrightarrow">↔</button>
+        <button class="sym-btn" data-sym="\\leq">≤</button>
+        <button class="sym-btn" data-sym="\\geq">≥</button>
+        <button class="sym-btn" data-sym="\\neq">≠</button>
+        <button class="sym-btn" data-sym="\\infty">∞</button>
+        <button class="sym-btn" data-sym="\\times">×</button>
+        <button class="sym-btn" data-sym="\\div">÷</button>
+        <button class="sym-btn" data-sym="\\cdot">·</button>
+        <button class="sym-btn" data-sym="\\alpha">α</button>
+        <button class="sym-btn" data-sym="\\beta">β</button>
+        <button class="sym-btn" data-sym="\\gamma">γ</button>
+        <button class="sym-btn" data-sym="\\theta">θ</button>
+        <button class="sym-btn" data-sym="\\lambda">λ</button>
+        <button class="sym-btn" data-sym="\\mu">μ</button>
+        <button class="sym-btn" data-sym="\\sigma">σ</button>
+        <button class="sym-btn" data-sym="\\pi">π</button>
+        <button class="sym-btn" data-sym="\\omega">ω</button>
+        <button class="sym-btn" data-sym="^{n}">xⁿ</button>
+        <button class="sym-btn" data-sym="_{n}">xₙ</button>
+        <button class="sym-btn" data-sym="^{n-1}">n⁻¹</button>
+        <button class="sym-btn" data-sym="\\log_2">log₂</button>
+        <button class="sym-btn" data-sym="\\lg">lg</button>
+        <button class="sym-btn" data-sym="\\ln">ln</button>
+        <button class="sym-btn" data-sym="\\binom{n}{k}">C(n,k)</button>
+        <button class="sym-btn" data-sym="\\approx">≈</button>
+        <button class="sym-btn" data-sym="\\equiv">≡</button>
+      </div>
+      <div class="math-modal-actions">
+        <button class="btn-primary" id="insertMathBtn">Insert</button>
+        <button class="btn-outline" id="cancelMathBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SYMBOL PICKER MODAL ===== -->
+<div class="modal-overlay hidden" id="symbolModal">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <div class="modal-title">∑ Symbol Picker</div>
+      <button class="modal-close" id="closeSymbolModal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="symbol-grid" id="symbolGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOAD JSON MODAL ===== -->
+<div class="modal-overlay hidden" id="loadJsonModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">📂 Load Questions from JSON</div>
+      <button class="modal-close" id="closeLoadModal">✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="color:var(--text-secondary);margin-bottom:16px;">Paste JSON array of questions or drag a .json file:</p>
+      <textarea id="jsonLoadInput" class="math-latex-input" rows="10" placeholder='[{"id":"Q001","year":2023,"subject":"Algorithms","question":"...","options":["A","B","C","D"],"answer":"A","explanation":"..."}]'></textarea>
+      <div class="math-modal-actions" style="margin-top:16px;">
+        <button class="btn-primary" id="loadJsonConfirm">Load</button>
+        <button class="btn-outline" id="loadJsonCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="diagram-renderer.js"></script>
+<script src="builder/builder.js"></script>
+</body>
+</html>

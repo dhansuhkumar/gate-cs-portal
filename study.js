@@ -14,6 +14,19 @@ const PDF_BASE_URL = IS_PRODUCTION
 // CORS proxy for GitHub Releases (no CORS headers on direct URLs)
 const CORS_PROXY = IS_PRODUCTION ? 'https://api.allorigins.win/raw?url=' : '';
 
+let pdfManifest = null;
+fetch('pdf-manifest.json')
+  .then(r => r.json())
+  .then(m => { pdfManifest = m; })
+  .catch(() => { pdfManifest = {}; });
+
+function resolvePdfPath(name) {
+  if (PDF_PATH_MAP[name]) return PDF_PATH_MAP[name];
+  const rel = pdfManifest && pdfManifest[name];
+  if (rel) return `${PDF_BASE_URL}/${rel}`;
+  return null;
+}
+
 const PDF_PATH_MAP = {
   'Algorithm_RBR_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_RBR_Notes.pdf`,
   'Algorithm_AppliedCourse_Notes.pdf': `${PDF_BASE_URL}/01_Algorithm/Algorithm_AppliedCourse_Notes.pdf`,
@@ -102,7 +115,7 @@ function openChapterFromSidebar(idx) {
 }
 
 function openChapter(ch) {
-  const pdfPath = PDF_PATH_MAP[ch.sourcePDF];
+  const pdfPath = resolvePdfPath(ch.sourcePDF);
   if (!pdfPath) {
     $('studyPlaceholder').innerHTML = `<p>No PDF mapping for ${ch.sourcePDF}.</p>`;
     $('studyPlaceholder').classList.remove('hidden');
@@ -122,7 +135,7 @@ function openNotesFromQuestion(pdfFile, pageNum) {
     openChapter(found);
     return;
   }
-  const path = PDF_PATH_MAP[pdfFile];
+  const path = resolvePdfPath(pdfFile);
   if (path) {
     $('studyPlaceholder').classList.add('hidden');
     $('pdfViewerContainer').classList.remove('hidden');
