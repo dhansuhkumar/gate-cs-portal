@@ -11,8 +11,8 @@ const IS_PRODUCTION = window.location.hostname !== 'localhost' && window.locatio
 const PDF_BASE_URL = IS_PRODUCTION
   ? 'https://github.com/dhansuhkumar/gate-cs-portal/releases/download/study-pdfs'
   : './pdfs';
-// CORS proxy for GitHub Releases (no CORS headers on direct URLs)
-const CORS_PROXY = IS_PRODUCTION ? 'https://api.allorigins.win/raw?url=' : '';
+// Now we use a Vercel Edge Function proxy (same-origin).
+const CORS_PROXY = IS_PRODUCTION ? '/api/pdf?url=' : '';
 
 let pdfManifest = null;
 fetch('pdf-manifest.json')
