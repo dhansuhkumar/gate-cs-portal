@@ -34,7 +34,7 @@ export default async function handler(request) {
       const v = upstream.headers.get(h);
       if (v) headers.set(h, v);
     }
-    headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    headers.set('Cache-Control', 'no-store');
 
     return new Response(upstream.body, { status: upstream.status, headers });
   } catch (err) {
