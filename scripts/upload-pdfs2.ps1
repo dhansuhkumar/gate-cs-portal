@@ -24,17 +24,19 @@ foreach ($f in $files) {
 $todo = $todo | Sort-Object Length
 "UPLOADING $($todo.Count) files, {0:N0} MB" -f (($todo | Measure-Object Length -Sum).Sum / 1MB) | Add-Content $log
 
-$i = 0
+$i = 0; $lastHeartbeat = Get-Date
 foreach ($f in $todo) {
   $i++
   $mb = [math]::Round($f.Length / 1MB, 1)
-  "[$i/$($todo.Count)] $(Get-Date -Format 'HH:mm:ss') $($f.Name) ($mb MB)" | Add-Content $log
+  "[$i/$($todo.Count)] $(Get-Date -Format 'HH:mm:ss') START $($f.Name) ($mb MB)" | Add-Content $log
   $ok = $false
-  for ($try = 1; $try -le 3 -and -not $ok; $try++) {
+  for ($try = 1; $try -le 4 -and -not $ok; $try++) {
+    if ((Get-Date) - $lastHeartbeat -gt [TimeSpan]::FromMinutes(60)) { "HEARTBEAT $(Get-Date -Format o)" | Add-Content $log; $lastHeartbeat = Get-Date }
     $out = gh release upload study-pdfs "$($f.FullName)" --clobber 2>&1 | Out-String
     if ($LASTEXITCODE -eq 0) { $ok = $true }
-    else { "  retry $try failed: $($out.Trim())" | Add-Content $log; Start-Sleep -Seconds 8 }
+    else { "  retry $try failed: $($out.Trim())" | Add-Content $log; Start-Sleep -Seconds 10 }
   }
-  if (-not $ok) { "  FAILED permanently: $($f.Name)" | Add-Content $log }
+  if ($ok) { "  DONE $(Get-Date -Format 'HH:mm:ss')" | Add-Content $log }
+  else { "  FAILED permanently: $($f.Name)" | Add-Content $log }
 }
 "DONE $(Get-Date -Format o)" | Add-Content $log
