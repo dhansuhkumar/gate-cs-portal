@@ -15,16 +15,28 @@ const PDF_BASE_URL = IS_PRODUCTION
 const CORS_PROXY = IS_PRODUCTION ? '/api/pdf?url=' : '';
 
 let pdfManifest = null;
+let ghAssets = null;
 fetch('pdf-manifest.json')
   .then(r => r.json())
   .then(m => { pdfManifest = m; })
   .catch(() => { pdfManifest = {}; });
 
+// Mirrors GitHub Releases sanitization (see generate-pdf-manifest.js)
+function githubAssetName(name) {
+  return name
+    .replace(/[^A-Za-z0-9._-]/g, '.')
+    .replace(/\.{2,}/g, '.')
+    .replace(/^\.+|\.+$/g, '');
+}
+fetch('gh-assets.json')
+  .then(r => r.json())
+  .then(m => { ghAssets = m; })
+  .catch(() => { ghAssets = {}; });
+
 function resolvePdfPath(name) {
   if (pdfManifest && pdfManifest[name]) {
-    // GitHub release assets: spaces -> dots (runs of dots collapsed) in asset names
     const assetName = IS_PRODUCTION
-      ? name.replace(/ /g, '.').replace(/\.{2,}/g, '.')
+      ? (ghAssets && ghAssets[name]) || githubAssetName(name)
       : pdfManifest[name];
     return `${PDF_BASE_URL}/${assetName}`;
   }
@@ -60,10 +72,10 @@ const PDF_PATH_MAP = {
   'GATE_General_Aptitude_2026_Syllabus.pdf': `${PDF_BASE_URL}/13_Syllabus/GATE_General_Aptitude_2026_Syllabus.pdf`
 };
 
-// GitHub release assets are flat basenames (spaces -> dots) — normalize in production
+// GitHub release assets are flat basenames (sanitized) — normalize in production
 if (IS_PRODUCTION) {
   for (const key of Object.keys(PDF_PATH_MAP)) {
-    PDF_PATH_MAP[key] = `${PDF_BASE_URL}/${key.replace(/ /g, '.').replace(/\.{2,}/g, '.')}`;
+    PDF_PATH_MAP[key] = `${PDF_BASE_URL}/${githubAssetName(key)}`;
   }
 }
 

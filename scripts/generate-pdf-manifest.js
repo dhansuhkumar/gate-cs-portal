@@ -5,7 +5,17 @@ const path = require('path');
 
 const PDFS_DIR = path.join(__dirname, '..', 'pdfs');
 const MANIFEST_OUT = path.join(__dirname, '..', 'pdf-manifest.json');
+const ASSETS_OUT = path.join(__dirname, '..', 'gh-assets.json');
 const CONTENT_FILE = path.join(__dirname, '..', 'study-content.json');
+
+// Mirrors GitHub Releases' asset-name sanitization: any char not in the safe
+// set becomes '.', runs of '.' collapse, edges trimmed.
+function githubAssetName(name) {
+  return name
+    .replace(/[^A-Za-z0-9._-]/g, '.')
+    .replace(/\.{2,}/g, '.')
+    .replace(/^\.+|\.+$/g, '');
+}
 
 const SUBJECT_BY_FOLDER = {
   '01_Algorithm': 'Algorithms',
@@ -58,6 +68,12 @@ for (const rel of sorted) {
 }
 fs.writeFileSync(MANIFEST_OUT, JSON.stringify(manifest, null, 2) + '\n');
 console.log('manifest entries:', Object.keys(manifest).length);
+
+// 1b. GitHub release asset name per file
+const ghAssets = {};
+for (const rel of sorted) ghAssets[path.basename(rel)] = githubAssetName(path.basename(rel));
+fs.writeFileSync(ASSETS_OUT, JSON.stringify(ghAssets, null, 2) + '\n');
+console.log('gh-assets entries:', Object.keys(ghAssets).length);
 
 // 2. Append new study-content entries for files not already referenced
 const content = JSON.parse(fs.readFileSync(CONTENT_FILE, 'utf8'));
